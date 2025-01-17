@@ -18,6 +18,7 @@ import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.regex.Pattern;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
@@ -161,12 +162,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         return inventoryTrigger(ItemPredicate.Builder.item()
                 .of(item).build());
     }
-    private String stripModId(String itemString) {
-        /*LOGGER.info(itemString);
+    private String stripNamespace(String itemString) {
         Pattern pattern = Pattern.compile("(.+):(.+)");
         var matches = pattern.matcher(itemString);
-        return matches.group(2);*/
-        return itemString.substring(SimplestExcavators.MODID.length() + 1);
+        if(matches.find()) {
+            return matches.group(2);
+        }
+        return "";
     }
 
     private void excavatorSmithingRecipe(Ingredient base, Ingredient additional, Item outputItem, RecipeOutput output) {
@@ -178,7 +180,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         outputItem
                 )
                 .unlocks("has_excavator_template", hasInInventory(ModItems.EXCAVATOR_SMITHING_TEMPLATE.get()))
-                .save(output, ResourceLocation.fromNamespaceAndPath(SimplestExcavators.MODID, stripModId(outputItem.toString()).concat("_from_shovel")));
+                .save(output, ResourceLocation.fromNamespaceAndPath(SimplestExcavators.MODID, stripNamespace(outputItem.toString()).concat("_from_shovel")));
     }
     private void excavatorUpgradeRecipe(Ingredient base, Ingredient additional, Item outputItem, RecipeOutput output) {
         SmithingTransformRecipeBuilder.smithing(
@@ -189,10 +191,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         outputItem
                 )
                 .unlocks("has_excavator_template", hasInInventory(ModItems.EXCAVATOR_SMITHING_TEMPLATE.get()))
-                .save(output, ResourceLocation.fromNamespaceAndPath(SimplestExcavators.MODID, stripModId(outputItem.toString()).concat("_from_upgrade")));
+                .save(output, ResourceLocation.fromNamespaceAndPath(SimplestExcavators.MODID, stripNamespace(outputItem.toString()).concat("_from_upgrade")));
     }
     private void basicBlastingAndSmeltingRecipe(Item input, Item outputItem, RecipeOutput output) {
-        var unqualifiedItemName = stripModId(input.toString());
+        var unqualifiedItemName = stripNamespace(input.toString());
         SimpleCookingRecipeBuilder.blasting(
                 Ingredient.of(input),
                 RecipeCategory.MISC,
