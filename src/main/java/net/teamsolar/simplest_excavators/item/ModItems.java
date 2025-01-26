@@ -1,7 +1,7 @@
-package net.indevo.simplest_excavators.item;
+package net.teamsolar.simplest_excavators.item;
 
-import net.indevo.simplest_excavators.SimplestExcavators;
-import net.indevo.simplest_excavators.item.custom.ExcavatorItem;
+import net.teamsolar.simplest_excavators.SimplestExcavators;
+import net.teamsolar.simplest_excavators.item.custom.ExcavatorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;

@@ -1,7 +1,7 @@
-package net.indevo.simplest_excavators.event;
+package net.teamsolar.simplest_excavators.event;
 
-import net.indevo.simplest_excavators.SimplestExcavators;
-import net.indevo.simplest_excavators.item.custom.ExcavatorItem;
+import net.teamsolar.simplest_excavators.SimplestExcavators;
+import net.teamsolar.simplest_excavators.item.custom.ExcavatorItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;

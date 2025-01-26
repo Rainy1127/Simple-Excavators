@@ -1,6 +1,6 @@
-package net.indevo.simplest_excavators.datagen;
+package net.teamsolar.simplest_excavators.datagen;
 
-import net.indevo.simplest_excavators.SimplestExcavators;
+import net.teamsolar.simplest_excavators.SimplestExcavators;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.BlockTagsProvider;

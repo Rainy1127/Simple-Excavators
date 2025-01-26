@@ -8,13 +8,14 @@ license="MIT"
 
 modId="simplest_excavators"
 
-version="1.1.4"
+version="1.1.5"
 
 displayName="Simplest Excavators"
 
-authors="IndEvo Studio"
+authors="Team Solar"
 
 description='''Vanilla excavators breaking in a 3x3 area.'''
+logoFile="icon.png"
 
 [[dependencies.simplest_excavators]]
 modId="forge"
@@ -27,12 +28,5 @@ side="BOTH"
 modId="minecraft"
 mandatory=true
 versionRange="${minecraft_version_range}"
-ordering="NONE"
-side="BOTH"
-
-[[dependencies.simplest_excavators]]
-modId="simplest_compression"
-mandatory=true
-versionRange="[1.0.0,)"
 ordering="NONE"
 side="BOTH"

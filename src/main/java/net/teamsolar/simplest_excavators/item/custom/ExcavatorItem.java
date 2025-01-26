@@ -1,4 +1,4 @@
-package net.indevo.simplest_excavators.item.custom;
+package net.teamsolar.simplest_excavators.item.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

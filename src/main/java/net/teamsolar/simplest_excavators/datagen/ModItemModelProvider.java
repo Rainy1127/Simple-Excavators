@@ -1,7 +1,7 @@
-package net.indevo.simplest_excavators.datagen;
+package net.teamsolar.simplest_excavators.datagen;
 
-import net.indevo.simplest_excavators.SimplestExcavators;
-import net.indevo.simplest_excavators.item.ModItems;
+import net.teamsolar.simplest_excavators.SimplestExcavators;
+import net.teamsolar.simplest_excavators.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

@@ -1,6 +1,6 @@
-package net.indevo.simplest_excavators.util;
+package net.teamsolar.simplest_excavators.util;
 
-import net.indevo.simplest_excavators.SimplestExcavators;
+import net.teamsolar.simplest_excavators.SimplestExcavators;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
